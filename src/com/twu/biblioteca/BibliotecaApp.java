@@ -7,7 +7,14 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         System.out.println(getWelcomeMsg());
-        System.out.println(listOfBooks);
+        System.out.println(getListOfBooks());
+    }
+
+    /**
+     * @return the list of books for the library
+     * */
+    public static String getListOfBooks() {
+        return listOfBooks;
     }
 
     /**
