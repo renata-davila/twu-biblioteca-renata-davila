@@ -75,11 +75,10 @@ public class BibliotecaAppTest {
 
         ListIterator<Book> iter = sampleList.listIterator();
 
+        // Which includes the books Author and Year Published (with column separators)
         while(iter.hasNext()) {
             Book item = iter.next();
-            assertTrue(outputLines.contains(item.title));
-            assertTrue(outputLines.contains(item.author));
-            assertTrue(outputLines.contains(item.yearOfPublication));
+            assertTrue(outputLines.contains(String.format("%s | %s | %s", item.title, item.author, item.yearOfPublication)));
         }
     }
 }
