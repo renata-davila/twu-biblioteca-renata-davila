@@ -64,7 +64,7 @@ public class BibliotecaAppTest {
         // After the welcome message appears
         BibliotecaApp.main(new String[] {""});
 
-        Book book1 = new Book();
+        Book book1 = new Book("Harry Potter", "J.K. Rowling", 1997);
 
         // THEN
         // They see a list of all library books
