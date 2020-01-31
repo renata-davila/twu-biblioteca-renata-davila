@@ -1,6 +1,9 @@
 package com.twu.biblioteca;
 
 public class Book {
-    public Book(String title, String author, int yearOfPublication) {
+    String title;
+
+    public Book(String bookTitle, String bookAuthor, int bookYearOfPublication) {
+        title = bookTitle;
     }
 }

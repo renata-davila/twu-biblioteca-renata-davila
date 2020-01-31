@@ -77,7 +77,9 @@ public class BibliotecaAppTest {
 
         while(iter.hasNext()) {
             Book item = iter.next();
-            assertTrue(outputLines.contains(item));
+            assertTrue(outputLines.contains(item.title));
+            assertTrue(outputLines.contains(item.author));
+            assertTrue(outputLines.contains(item.yearOfPublication));
         }
     }
 }
