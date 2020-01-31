@@ -18,6 +18,7 @@ public class BibliotecaAppTest {
 
     // Welcome message that should be displayed
     private final String welcomeMsg = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
+    // Sample list of library books
     private final String listOfBooks = "Harry Potter\nLord of the Rings\nThe Fall of Gondolin";
 
     /**
@@ -49,7 +50,7 @@ public class BibliotecaAppTest {
 
         // THEN
         // They see a welcome message
-        assertEquals(welcomeMsg + System.getProperty("line.separator"), outContent.toString());
+        assertTrue(outContent.toString().contains(welcomeMsg + System.getProperty("line.separator")));
     }
 
     /**
