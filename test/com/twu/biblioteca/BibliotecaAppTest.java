@@ -6,8 +6,9 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 
 /**
@@ -61,11 +62,18 @@ public class BibliotecaAppTest {
         // WHEN
         // After the welcome message appears
         BibliotecaApp.main(new String[] {""});
-        outContent.toString();
 
         // THEN
         // They see a list of all library books
-        assertEquals(listOfBooks + System.getProperty("line.separator"), outContent.toString());
+        List<String> outputLines = Arrays.asList(outContent.toString().split("\n"));
+        List<String> sampleList = Arrays.asList(listOfBooks.split("\n"));
+
+        ListIterator<String> iter = sampleList.listIterator();
+
+        while(iter.hasNext()) {
+            String item = iter.next();
+            assertTrue(outputLines.contains(item));
+        }
     }
 }
 
