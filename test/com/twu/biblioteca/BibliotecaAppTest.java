@@ -64,6 +64,8 @@ public class BibliotecaAppTest {
         // After the welcome message appears
         BibliotecaApp.main(new String[] {""});
 
+        Book book1 = new Book();
+
         // THEN
         // They see a list of all library books
         List<String> outputLines = Arrays.asList(outContent.toString().split("\n"));
