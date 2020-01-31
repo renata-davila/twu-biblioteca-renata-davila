@@ -10,6 +10,13 @@ public class BibliotecaApp {
     private static List<Book> listOfBooks = new ArrayList<Book>();
 
     public static void main(String[] args) {
+        Book book1 = new Book("Harry Potter", "J.K. Rowling", 1997);
+        Book book2 = new Book("Lord of the Rings", "J.R.R. Tolkien", 1954);
+        Book book3 = new Book("The Fall of Gondolin", "J.R.R. Tolkien", 2018);
+        setListOfBooks(book1);
+        setListOfBooks(book2);
+        setListOfBooks(book3);
+
         System.out.println(getWelcomeMsg());
         System.out.println(getListOfBooks());
     }
