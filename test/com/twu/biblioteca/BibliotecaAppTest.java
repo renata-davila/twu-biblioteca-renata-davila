@@ -65,16 +65,18 @@ public class BibliotecaAppTest {
         BibliotecaApp.main(new String[] {""});
 
         Book book1 = new Book("Harry Potter", "J.K. Rowling", 1997);
+        Book book2 = new Book("Lord of the Rings", "J.R.R. Tolkien", 1954);
+        Book book3 = new Book("The Fall of Gondolin", "J.R.R. Tolkien", 2018);
 
         // THEN
         // They see a list of all library books
         List<String> outputLines = Arrays.asList(outContent.toString().split("\n"));
-        List<String> sampleList = Arrays.asList(listOfBooks.split("\n"));
+        List<Book> sampleList = Arrays.asList(book1, book2, book3);
 
-        ListIterator<String> iter = sampleList.listIterator();
+        ListIterator<Book> iter = sampleList.listIterator();
 
         while(iter.hasNext()) {
-            String item = iter.next();
+            Book item = iter.next();
             assertTrue(outputLines.contains(item));
         }
     }
